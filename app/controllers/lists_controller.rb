@@ -11,19 +11,16 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     # @movies = Movie.new()
-    @list.save
-    redirect_to lists_path(@lists)
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new
+    end
   end
 
-  #   def create
-  #   @review = Review.new(review_params)
-  #   # we need `restaurant_id` to associate review with corresponding restaurant
-  #   @restaurant = Restaurant.find(params[:restaurant_id])
-  #   @review.restaurant = @restaurant
-  #   @review.save
-  #   redirect_to restaurant_path(@restaurant)
-  # end
-
+  def new
+    @list = List.new
+  end
 
    private
 

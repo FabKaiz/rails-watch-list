@@ -4,7 +4,9 @@
 
 
 <%= simple_form_for ([@list, @bookmark]) do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movies_id %>
+  <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
+  <%= f.association :movie, prompt: 'Select a movie' %>
   <%= f.submit "Create" %>
 <% end %>
+
+<%= link_to "Back", lists_path(@lists) %>
