@@ -14,7 +14,6 @@
   display: flex;
   align-items: center;
   // padding: 150px 0;
-  margin-bottom: 100px;
 }
 
 .banner-img h2 {
@@ -33,7 +32,55 @@
 }
 
 .h2 {
+  font-family: "Oswald", sans-serif;
   font-size: 60px;
-  margin-left: 100px;
+  font-weight: 400;
+  padding-bottom: 50px;
+  // margin-left: 100px;
 }
 
+.bg-dark {
+  .h2 {
+    color: #fff;
+  }
+
+  i {
+    color: #fff;
+  }
+
+  button {
+    color: #000;
+    font-weight: bold;
+    margin-left: 10px;
+    background-color: #fff;
+
+    i {
+      color: #000000;
+    }
+  }
+
+  button:hover {
+    color: #fff;
+    background-color: #6d0051;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .desc-img {
+    width: 50%;
+  }
+}
+
+.create-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

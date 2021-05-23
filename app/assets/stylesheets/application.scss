@@ -8,15 +8,32 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "materialize";
-
+@import "materialize-css/dist/css/materialize";
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 
-* { 
-  font-family: 'Nunito Sans', sans-serif;
+* {
+  font-family: "Nunito Sans", sans-serif;
   // font-family: 'Roboto', sans-serif;
   margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+.bg-dark {
+  background-color: rgb(39, 32, 36);
+  padding: 150px;
+}
+
+.bg-light {
+  background-color: #f7deec;
+  padding: 150px;
+}
+
+footer.bg-dark {
   padding: 0;
 }

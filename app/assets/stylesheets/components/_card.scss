@@ -1,41 +1,47 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-  
+
   .card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    image-url("list.jpg");
+    background-image: linear-gradient(
+        rgba(87, 24, 53, 0.363),
+        rgba(0, 0, 0, 0.4)
+      ),
+      image-url("list.jpg");
     background-size: cover;
     background-position: center;
-    height: 180px;
+    height: 219px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: clip-path 0.3s, opacity 0.4s;
+    opacity: 0.9;
+    clip-path: circle(75% at 50% 50%);
   }
 
-  a {
-    font-family: 'Roboto', sans-serif;
+  h3 {
+    font-family: "Roboto", sans-serif;
     font-size: 32px;
     text-decoration: none;
     color: white;
+    // padding: 100px;
   }
-  
-  .card:hover a {
-    transition: all .1s ease;
-    
+
+  a:hover .card {
+    clip-path: circle(41% at 50% 50%);
     font-size: 48px;
+    // transform: scaleY(1.15) scaleX(1.07);
+    // border-radius: 120px;
+    opacity: 1;
   }
 }
-
-
-
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
@@ -68,6 +74,13 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (very large desktops, 1500px and up)
+@media (min-width: 1600px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
